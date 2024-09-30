@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="foodApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="FoodController as foodCtrl">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1>Foodie Restaurant</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item" ng-repeat="item in foodCtrl.menuItems">
+                <img ng-src="{{item.image}}" alt="{{item.name}}">
+                <h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
+                <p>Price: Rs {{item.price}}</p>
+                <button ng-click="foodCtrl.addToOrder(item)">Add to Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Summary Section -->
+    <div class="order-summary">
+        <h2>Your Order</h2>
+        <ul>
+            <li ng-repeat="item in foodCtrl.orderItems">
+                {{item.name}} - Rs{{item.price}} 
+                <button ng-click="foodCtrl.removeFromOrder(item)">Remove</button>
+            </li>
+        </ul>
+        <p>Total: Rs {{foodCtrl.getTotal()}}</p>
+        <button ng-click="foodCtrl.placeOrder()">Place Order</button>
+    </div>
+
+</body>
+</html>
+

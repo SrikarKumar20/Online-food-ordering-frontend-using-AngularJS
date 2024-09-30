@@ -1,0 +1,131 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0eff5;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.navbar h1 {
+    margin-left: 20px;
+    display: inline;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: rgb(223, 214, 214);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.menu-item button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item button:hover {
+    background-color: #ff4500;
+}
+
+/* Order Summary */
+.order-summary {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.order-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-summary li {
+    margin: 10px 0;
+}
+
+.order-summary button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.order-summary button:hover {
+    background-color: darkred;
+}
+
+.order-summary p {
+    font-size: 18px;
+}
+
+.order-summary button:last-of-type {
+    background-color: green;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.order-summary button:last-of-type:hover {
+    background-color: darkgreen;
+}
